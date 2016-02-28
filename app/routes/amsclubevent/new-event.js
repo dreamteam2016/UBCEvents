@@ -17,10 +17,6 @@ export default Ember.Route.extend({
 	actions: {
 
 			addEvent(newEvent) {
-				// if (!this.noteIsValid()) {
-				// 	return;
-				// }
-
 				let amsclubevent = this.modelFor('amsclubevent');
 				amsclubevent.get('event').pushObject(newEvent);
 				amsclubevent.save();
