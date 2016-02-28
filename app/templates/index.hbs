@@ -1,5 +1,5 @@
 <style>
-     #frontPage {
+    #frontPage {
         padding: 30px 0 10px 0;
     }
 
@@ -7,10 +7,12 @@
         margin: 0 auto;
         width: 100%;
     }
+
     .centerBlock {
         display: table;
         margin: 0 auto;
     }
+
     .thumbnail {
         margin-top: 30px;
         margin-bottom: 10px;
@@ -18,26 +20,28 @@
 </style>
 
 <div class="row" style="text-align:center;">
-   {{#each model as |event|}} 
+    {{#each model as |event|}}
 
     <div class="col-xs-3 col-md-3">
         <div class="centerBlock">
-            <a href="#" class="thumbnail" style="height:180px; width:171px;"></a>
+            <a href="#" class="thumbnail" style="height:180px; width:171px;">
+                <img src="/app/templates/Others.jpg" />
+            </a>
         </div>
-      <button type="button" class="btn btn-link" data-toggle="modal" data-target="#{{event.id}}">{{event.name}}</button>
+        <button type="button" class="btn btn-link" data-toggle="modal" data-target="#{{event.id}}">{{event.name}}</button>
     </div>
 
-       <!-- Modal -->
-  <div class="modal fade" id="{{event.id}}" role="dialog">
-    <div class="modal-dialog">
+    <!-- Modal -->
+    <div class="modal fade" id="{{event.id}}" role="dialog">
+        <div class="modal-dialog">
 
-      <!-- Modal content-->
-      <div class="modal-content">
+            <!-- Modal content-->
+            <div class="modal-content">
 
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">{{event.name}}</h4>
-        </div>
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">{{event.name}}</h4>
+                </div>
 
         <div class="modal-body">
           
@@ -48,24 +52,19 @@
           <p>Descripition: {{event.description}}</p>
         </div>
 
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+
+            </div>
+
         </div>
 
-      </div>
-
     </div>
-
-  </div>
-  <!-- End Modal-->
-  {{/each}}
+    <!-- End Modal-->
+    {{/each}}
 </div>
 
 <br>
 <br>
-
-
-
-
-
-

@@ -12,7 +12,6 @@ export default Ember.Route.extend({
 	    return this.store.createRecord('event');
 	  },
 	actions: {
-
 			addEvent(newEvent) {
 				let amsclubevent = this.modelFor('amsclubevent');
 				amsclubevent.get('event').pushObject(newEvent);
