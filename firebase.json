@@ -1,0 +1,8 @@
+{
+  "firebase": "ubcevents",
+  "public": "dist",
+  "rewrites": [{
+    "source": "**",
+    "destination": "/index.html"
+  }]
+}
