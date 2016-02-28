@@ -17,9 +17,11 @@
     }
 </style>
 
+<link rel="stylesheet" type="text/css" href="../styles/webfont.css" />
+
 <div id="frontPage">
     <div class="center-div" style="text-align:center">
-        <p style="font-size:5em;">UBCEvents</p>
+        <p style="font-size:5em;font-family: 'Lora', serif;">UBCEvents</p>
 
         <div style="display:inline-block; width:100px;"></div>
         
@@ -44,19 +46,9 @@
     {{#each model as |event|}}
     <div class="col-xs-3 col-md-3">
         <div class="centerBlock">
-            <a href="#" class="thumbnail" style="height:180px; width:171px;"></a>
-        </div>
-        {{event.name}} at {{event.location}}
-    </div>
-    {{/each}}
-</div>
-
-
-<div class="row" style="text-align:center;">
-    {{#each model as |event|}}
-    <div class="col-xs-3 col-md-3">
-        <div class="centerBlock">
-            <a href="#" class="thumbnail" style="height:180px; width:171px;"></a>
+            <a href="#" class="thumbnail" style="height:180px; width:171px;">
+                <img src="../imgs/{{event.category}}" />
+            </a>
         </div>
         {{event.name}} at {{event.location}}
     </div>
