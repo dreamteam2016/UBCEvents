@@ -2,6 +2,7 @@
   <div class="container-fluid">
  
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    
       <form id="signin" class="navbar-form navbar-right" role="form">
         {{#if session.isAuthenticated}}
 			  <button class="btn btn-default" {{action "logout"}}> Logout </button>
