@@ -10,6 +10,8 @@
 
 See you guys around soon!
 
+<b> Run on https://ubcevents.firebaseapp.com/ </b>
+
 ## Prerequisites
 
 You will need the following things properly installed on your computer.
