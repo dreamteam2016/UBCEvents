@@ -1,28 +1,19 @@
 <h3> {{model.name}}'s Events </h3>
 
-  <table class="table table-striped" id="tripDataTable">
-		<thead>
-			<tr>
-    		<th>Name</th>
-	        <th>Location</th>
-	        <th>Room Number</th>
-	        <th>Event Time</th>
-      </tr>
-    </thead>
-    <tbody>
-    
-  		{{#each model.event as |event|}} 
-      <tr>
-		    <th>{{event.name}}</th>
-		    <th>{{event.location}}</th>
-        <th>{{event.roomNumber}}</th>
-        <th>{{event.eventTime}}</th>
-       </tr>
-        
-      {{/each}}
+<div class="row" style="text-align:center;">
+    {{#each model.event as |event|}}
+    <div class="col-xs-3 col-md-3">
+        <div class="centerBlock">
+            <a href="#" class="thumbnail" style="height:180px; width:171px;"></a>
+        </div>
+        {{event.name}} at {{event.location}}
+    </div>
+    {{/each}}
+</div>
 
-    </tbody>
-  </table>
+<br>
+<br>
+      
       
 {{#link-to 'ubcfaculty.new-event' model class='new-event'}}
   Add new Event
