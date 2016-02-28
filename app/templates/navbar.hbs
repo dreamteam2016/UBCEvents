@@ -1,5 +1,5 @@
 <style>
-     #frontPage {
+    #frontPage {
         padding: 30px 0 10px 0;
     }
 
@@ -7,13 +7,24 @@
         margin: 0 auto;
         width: 100%;
     }
+
     .centerBlock {
         display: table;
         margin: 0 auto;
     }
+
     .thumbnail {
         margin-top: 30px;
         margin-bottom: 10px;
+    }
+
+    a > a {
+        color: black !important;
+        text-decoration: none !important;
+    }
+
+    input {
+        height: 30px;
     }
 </style>
 
@@ -26,14 +37,15 @@
 
 
         <div style="display:inline-block; width:100px;"></div>
-        
-        <div class="btn-group text-center">
-            <button type="button" class="btn btn-default">{{#link-to 'index'}}<a href="">All</a>{{/link-to}}</button>
-            <button type="button" class="btn btn-default"><a href="/reccentre/-KBanIIWQzHcDAehkjjK/events">Rec Centre</a></button>
-            <button type="button" class="btn btn-default"><a href="/amsclubevent/-KBbA3i6Ce7VEGhHQNUx/events">AMS Clubs</a></button>
-            <button type="button" class="btn btn-default"><a href="/ubcfaculty/-KBb9oDpOgEElydg8Sd6/events">UBC Faculty</a></button>
-            <button type="button" class="btn btn-default"><a href="freefood/-KBbtexjOW905cy88t9a/events">Free Food</a></button>
-            <button type="button" class="btn btn-default"><a href="other/-KBc8bYp3Q-nIRg6r-wL/events">Other Events</a></button>
+
+        <div class="btn-group text-center" style="position:relative; left:-45px;">
+            <a href="#" class="btn btn-default" style="color:black; text-decoration:none;">{{#link-to 'index'}}All Events{{/link-to}}</a>
+            <a class="btn btn-default" href="/reccentre/-KBanIIWQzHcDAehkjjK/events">Rec Centre</a>
+            <a class="btn btn-default" href="/amsclubevent/-KBbA3i6Ce7VEGhHQNUx/events">AMS Clubs</a>
+            <a class="btn btn-default" href="/ubcfaculty/-KBb9oDpOgEElydg8Sd6/events">UBC Faculty</a>
+            <a class="btn btn-default" href="freefood/-KBbtexjOW905cy88t9a/events">Free Food</a>
+            <a class="btn btn-default" href="other/-KBc8bYp3Q-nIRg6r-wL/events">Other Events</a>
+
         </div>
     </div>
     <div class="center-div">
