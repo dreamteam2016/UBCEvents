@@ -14,6 +14,14 @@ Router.map(function() {
     this.route('events');
     this.route('new-event');
   });
+
+  this.route('amsclubevent', { path: '/amsclubevent/:id'}, function() {
+    this.route('events');
+    this.route('new-event');
+  });
+  this.route('amsclubevents', function() {
+    this.route('new');
+  });
 });
 
 export default Router;

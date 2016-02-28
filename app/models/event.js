@@ -11,7 +11,14 @@ export default DS.Model.extend({
 	  		return new Date();
 	  	}
 	  }),
+
 	reccentre: DS.belongsTo('reccentre', {
+		async: true,
+		inverse: 'event',
+		embedded: 'always'
+	}),
+
+	amsclubevent: DS.belongsTo('amsclubevent', {
 		async: true,
 		inverse: 'event',
 		embedded: 'always'

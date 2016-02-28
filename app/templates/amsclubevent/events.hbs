@@ -1,0 +1,29 @@
+<h3> {{model.name}}'s Events </h3>
+
+  <table class="table table-striped" id="tripDataTable">
+		<thead>
+			<tr>
+    		<th>Name</th>
+	        <th>Location</th>
+	        <th>Room Number</th>
+	        <th>Event Time</th>
+      </tr>
+    </thead>
+    <tbody>
+    
+  		{{#each model.event as |event|}} 
+      <tr>
+		    <th>{{event.name}}</th>
+		    <th>{{event.location}}</th>
+        <th>{{event.roomNumber}}</th>
+        <th>{{event.eventTime}}hrs</th>
+       </tr>
+        
+      {{/each}}
+
+    </tbody>
+  </table>
+      
+{{#link-to 'amsclubevent.new-event' model class='new-event'}}
+  Add new Event
+{{/link-to}}
