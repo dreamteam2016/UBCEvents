@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-	beforeModel: function(){
+		beforeModel: function(){
     console.log(this.get('session'));
     if(!this.get('session.isAuthenticated')){
     	alert("Please log in as admin to add an event!");
@@ -15,12 +15,11 @@ export default Ember.Route.extend({
 	actions: {
 
 			addEvent(newEvent) {
-
-				let reccentre = this.modelFor('reccentre');
-				reccentre.get('event').pushObject(newEvent);
-				reccentre.save();
+				let other = this.modelFor('other');
+				other.get('event').pushObject(newEvent);
+				other.save();
 	      		newEvent.save().then(() => {
-	        		this.transitionTo('reccentre.events', reccentre);
+	        		this.transitionTo('other.events', other);
 	      		});
 	    	}
 	    }
