@@ -15,6 +15,15 @@ Router.map(function() {
     this.route('new-event');
   });
 
+  this.route('amsclubevent', { path: '/amsclubevent/:id'}, function() {
+    this.route('events');
+    this.route('new-event');
+  });
+
+  this.route('amsclubevents', function() {
+    this.route('new');
+  });
+
   this.route('ubcfaculty', { path: '/ubcfaculty/:id'}, function() {
     this.route('events');
     this.route('new-event');
@@ -24,4 +33,5 @@ Router.map(function() {
     this.route('new');
   });
 });
+
 export default Router;
