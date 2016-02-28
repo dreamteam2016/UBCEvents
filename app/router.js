@@ -37,7 +37,7 @@ Router.map(function() {
     this.route('events');
     this.route('new-event');
   });
-  
+
   this.route('freefoods', function() {
     this.route('new');
   });
@@ -46,6 +46,15 @@ Router.map(function() {
 
   this.route('event', { path: '/event/:id'}, function() {});
 
+  this.route('other', { path: '/other/:id'}, function() {
+    this.route('events');
+    this.route('new-event');
+  });
+
+  this.route('others', function() {
+    this.route('new');
+  });
+  
 });
 
 export default Router;
