@@ -37,5 +37,12 @@ export default DS.Model.extend({
 		async: true,
 		inverse: 'event',
 		embedded: 'always'
+	}),
+
+	other: DS.belongsTo('other', {
+		async: true,
+		inverse: 'event',
+		embedded: 'always'
 	})
+
   });
