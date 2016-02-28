@@ -1,26 +1,19 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
+		beforeModel: function(){
+    console.log(this.get('session'));
+    if(!this.get('session.isAuthenticated')){
+    	alert("Please log in as admin to add an event!");
+      this.transitionTo('application');
+    }
+  },
 	model() {
 	    return this.store.createRecord('event');
 	  },
-
-	  // noteIsValid: function() {
-	  // 	var isValid = true;
-	  // 	['note.name'].forEach(function(field) {
-	  // 		if (this.get(field) === '') {
-	  // 			isValid = false;
-	  // 		}
-	  // 	}, this);
-	  // 	return isValid;
-	  // },
 	actions: {
 
 			addEvent(newEvent) {
-				// if (!this.noteIsValid()) {
-				// 	return;
-				// }
-
 				let ubcfaculty = this.modelFor('ubcfaculty');
 				ubcfaculty.get('event').pushObject(newEvent);
 				ubcfaculty.save();
