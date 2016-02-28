@@ -1,0 +1,9 @@
+<h2>List</h2>
+
+{{#each model as |ubcfaculty|}}
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">{{#link-to 'ubcfaculty' ubcfaculty class='ubcfaculty-link'}}{{ubcfaculty.name}}{{/link-to}}</h3>
+        </div>
+    </div>
+{{/each}}
