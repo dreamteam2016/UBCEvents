@@ -1,6 +1,7 @@
 import DS from 'ember-data';
 
 export default DS.Model.extend({
+
 	name: DS.attr('string'),
 	location: DS.attr('string'),
 	roomNumber: DS.attr('string'),
@@ -15,5 +16,4 @@ export default DS.Model.extend({
 		inverse: 'event',
 		embedded: 'always'
 	})
-  
-});
+  });
