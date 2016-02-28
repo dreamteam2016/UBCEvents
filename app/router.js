@@ -25,13 +25,18 @@ Router.map(function() {
   });
 
   this.route('ubcfaculty', { path: '/ubcfaculty/:id'}, function() {
-    this.route('events');
+    this.route('events', function() {});
     this.route('new-event');
   });
 
   this.route('ubcfaculties', function() {
     this.route('new');
   });
+
+  this.route('events', function() {});
+
+  this.route('event', { path: '/event/:id'}, function() {});
+
 });
 
 export default Router;

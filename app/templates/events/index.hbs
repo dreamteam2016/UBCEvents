@@ -22,9 +22,9 @@
 
     <div class="col-xs-3 col-md-3">
         <div class="centerBlock">
-            <a href="#" class="thumbnail" style="height:180px; width:171px;"></a>
+            <a href="/events" class="thumbnail" style="height:180px; width:171px;"></a>
         </div>
-      <button type="button" class="btn btn-link" data-toggle="modal" data-target="#{{event.name}}">{{event.name}}</button>
+     {{#link-to 'event' event class='event-link'}}{{event.name}}{{/link-to}}
     </div>
     {{/each}}
 </div>
