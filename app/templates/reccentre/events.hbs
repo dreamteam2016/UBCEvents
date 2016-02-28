@@ -1,14 +1,44 @@
-<h3> {{model.name}}'s Events </h3>
-
 <div class="row" style="text-align:center;">
-    {{#each model.event as |event|}}
+   {{#each model.event as |event|}} 
+
     <div class="col-xs-3 col-md-3">
         <div class="centerBlock">
             <a href="#" class="thumbnail" style="height:180px; width:171px;"></a>
         </div>
-        {{event.name}} at {{event.location}}
+      <button type="button" class="btn btn-link" data-toggle="modal" data-target="#{{event.id}}">{{event.name}}</button>
     </div>
-    {{/each}}
+
+       <!-- Modal -->
+  <div class="modal fade" id="{{event.id}}" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">{{event.name}}</h4>
+        </div>
+
+        <div class="modal-body">
+          <p>Location: {{event.location}}</p>
+          <p>Room Number: {{event.roomNumber}}</p>
+          <p>Event Day: {{event.eventDay}}</p>
+          <p>Event Time: {{event.eventTime}}</p>
+          <p>Descripition: {{event.description}}</p>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+  <!-- End Modal-->
+  {{/each}}
 </div>
 
 <br>
