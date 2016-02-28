@@ -2,9 +2,18 @@ import DS from 'ember-data';
 
 export default DS.Model.extend({
 	name: DS.attr('string'),
-	building: DS.attr('string'),
+	location: DS.attr('string'),
 	roomNumber: DS.attr('string'),
-	lat: DS.attr('number'),
-	lng: DS.attr('number')
+	eventTime: DS.attr('number'),
+	createdAt: DS.attr('string', {
+	  	defaultValue() {
+	  		return new Date();
+	  	}
+	  }),
+	reccentre: DS.belongsTo('reccentre', {
+		async: true,
+		inverse: 'event',
+		embedded: 'always'
+	})
   
 });

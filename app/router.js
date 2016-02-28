@@ -6,11 +6,13 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('events');
+  this.route('reccentres', function() {
+      this.route('new');
+    });
 
-  this.route('reccentre', function() {
-    this.route('index');
-    this.route('new');
+  this.route('reccentre', { path: '/reccentre/:id'}, function() {
+    this.route('events');
+    this.route('new-event');
   });
 });
 
