@@ -1,10 +1,14 @@
 # Ubcevents
 
 Students: Ever tired of missing an event you wish you heard earlier?
+
 Organizers: Ever tired or not getting the word out about your event?
 
+
 Students: Now you can see ALL UBC events on one convenient page with no registration! Filter by category, and get new updates everyday and never miss that event again.
+
 Organizers: Sign up to post your event and let UBC know what awesome event you're hosting.
+
 
 See you guys around soon!
 
