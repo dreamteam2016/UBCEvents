@@ -22,5 +22,11 @@ export default DS.Model.extend({
 		async: true,
 		inverse: 'event',
 		embedded: 'always'
+	}),
+
+	ubcfaculty: DS.belongsTo('ubcfaculty', {
+		async: true,
+		inverse: 'event',
+		embedded: 'always'
 	})
   });

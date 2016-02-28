@@ -5,15 +5,6 @@ export default Ember.Route.extend({
 	    return this.store.createRecord('event');
 	  },
 
-	  // noteIsValid: function() {
-	  // 	var isValid = true;
-	  // 	['note.name'].forEach(function(field) {
-	  // 		if (this.get(field) === '') {
-	  // 			isValid = false;
-	  // 		}
-	  // 	}, this);
-	  // 	return isValid;
-	  // },
 	actions: {
 
 			addEvent(newEvent) {
