@@ -14,4 +14,6 @@ export default Ember.Route.extend({
         return this.store.findAll('event');
        
     }
+
+    
 });

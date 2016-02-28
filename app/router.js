@@ -25,7 +25,7 @@ Router.map(function() {
   });
 
   this.route('ubcfaculty', { path: '/ubcfaculty/:id'}, function() {
-    this.route('events');
+    this.route('events', function() {});
     this.route('new-event');
   });
 
@@ -41,7 +41,11 @@ Router.map(function() {
   this.route('freefoods', function() {
     this.route('new');
   });
-  
+
+  this.route('events', function() {});
+
+  this.route('event', { path: '/event/:id'}, function() {});
+
 });
 
 export default Router;
