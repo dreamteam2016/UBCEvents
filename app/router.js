@@ -14,6 +14,14 @@ Router.map(function() {
     this.route('events');
     this.route('new-event');
   });
-});
 
+  this.route('ubcfaculty', { path: '/ubcfaculty/:id'}, function() {
+    this.route('events');
+    this.route('new-event');
+  });
+
+  this.route('ubcfaculties', function() {
+    this.route('new');
+  });
+});
 export default Router;
