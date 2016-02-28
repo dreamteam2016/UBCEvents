@@ -6,5 +6,6 @@ export default DS.Model.extend({
 		async: true,
 		inverse: 'other',
 		embedded: 'always'
-	})
+	}),
+	imagePath: DS.attr('string')
 });
