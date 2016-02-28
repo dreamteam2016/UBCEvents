@@ -1,6 +1,6 @@
 # Ubcevents
 
-Students: Ever tired of missing an event you wish you heard earlier?
+<b>Students</b>: Ever tired of missing an event you wish you heard earlier?
 
 Organizers: Ever tired or not getting the word out about your event?
 
