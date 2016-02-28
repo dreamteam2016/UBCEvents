@@ -32,6 +32,16 @@ Router.map(function() {
   this.route('ubcfaculties', function() {
     this.route('new');
   });
+
+  this.route('freefood', { path: '/freefood/:id'}, function() {
+    this.route('events');
+    this.route('new-event');
+  });
+  
+  this.route('freefoods', function() {
+    this.route('new');
+  });
+  
 });
 
 export default Router;

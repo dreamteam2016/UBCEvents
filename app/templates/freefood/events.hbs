@@ -1,0 +1,20 @@
+<h3> {{model.name}}'s Events </h3>
+
+<div class="row" style="text-align:center;">
+    {{#each model.event as |event|}}
+    <div class="col-xs-3 col-md-3">
+        <div class="centerBlock">
+            <a href="#" class="thumbnail" style="height:180px; width:171px;"></a>
+        </div>
+        {{event.name}} at {{event.location}}
+    </div>
+    {{/each}}
+</div>
+
+<br>
+<br>
+      
+      
+{{#link-to 'freefood.new-event' model class='new-event'}}
+  Add new Event
+{{/link-to}}

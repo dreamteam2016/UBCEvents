@@ -31,5 +31,11 @@ export default DS.Model.extend({
 		async: true,
 		inverse: 'event',
 		embedded: 'always'
+	}),
+
+	freefood: DS.belongsTo('freefood', {
+		async: true,
+		inverse: 'event',
+		embedded: 'always'
 	})
   });
