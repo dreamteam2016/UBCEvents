@@ -1,4 +1,39 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+ 
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    
+      <form id="signin" class="navbar-form navbar-right" role="form">
+        {{#if session.isAuthenticated}}
+			  <button class="btn btn-default" {{action "logout"}}> Logout </button>
+			  {{else}}
+        <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+             {{input type="text" value=userEmail placeholder="Email"}}                                       
+        </div>
+
+        <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+          {{input type="password" value=userPassword placeholder="Password"}}                                      
+        </div>
+
+       <button class="btn btn-default" {{action "login"}}> Login </button>
+         {{/if}}
+
+        {{#link-to 'signup'}}<button class="btn btn-default"> Signup </button>{{/link-to}}
+   </form>
+     
+    </div>
+ 
+  </div>
+
+</nav>
+
+
+
 <div class="container">
  {{partial 'navbar'}}
     {{outlet}}
 </div>
+
+

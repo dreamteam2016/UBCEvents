@@ -54,7 +54,8 @@ Router.map(function() {
   this.route('others', function() {
     this.route('new');
   });
-  
+
+  this.route('signup');
 });
 
 export default Router;
